@@ -1,0 +1,16 @@
+﻿@model IEnumerable<MedBrat.Areas.Account.ViewModels.DoctorsRecordViewModel>
+@{
+    ViewData["Title"] = "Доктора";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach(var docRec in Model)
+{
+    <div style = "text-align:center; border:1px solid black">
+        <a class="nav-link" asp-area="Account" asp-controller="Record" asp-action="Doctor" asp-route-id=@docRec.DoctorId>
+            <div><b>@docRec.Name</b></div>
+            <div style = "color:grey">@docRec.Specialization</div>
+        </a>
+    </div>
+}

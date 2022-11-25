@@ -1,0 +1,18 @@
+﻿@model MedBrat.Areas.Account.ViewModels.ClinicViewModel
+
+<div>Название клиники: @Model.Name</div>
+<div>Адрес: г.@Model.City, @Model.Address</div>
+<br />
+@foreach(var doc in Model.Doctors)
+{
+    <div class="mb-2" style = "border:1px solid black; max-width: 800px">
+        <a class="nav-link m-1" asp-area="Account" asp-controller="Clinic" asp-action="Doctor" asp-route-id=@doc.DoctorId>
+            <div><b>@doc.Name</b></div>
+            <div style = "color:grey">@doc.Specialization</div>
+        </a>
+    </div>
+}
+
+<a asp-area="Account" asp-controller="Clinic" asp-action="EditClinic">Редактировать</a>
+<br />
+<a asp-area="Account" asp-controller="Clinic" asp-action="AddDoctor">Добавить доктора</a>

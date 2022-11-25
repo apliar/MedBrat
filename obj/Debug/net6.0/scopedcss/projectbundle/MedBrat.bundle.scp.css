@@ -1,0 +1,98 @@
+/* _content/MedBrat/Areas/Account/Views/Shared/_ProfileLayout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-wmtbcdjapl] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-wmtbcdjapl] {
+  color: #0077cc;
+}
+
+.btn-primary[b-wmtbcdjapl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-wmtbcdjapl], .nav-pills .show > .nav-link[b-wmtbcdjapl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-wmtbcdjapl] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-wmtbcdjapl] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-wmtbcdjapl] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-wmtbcdjapl] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-wmtbcdjapl] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/MedBrat/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-kofl515fwb] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-kofl515fwb] {
+  color: #0077cc;
+}
+
+.btn-primary[b-kofl515fwb] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-kofl515fwb], .nav-pills .show > .nav-link[b-kofl515fwb] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-kofl515fwb] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-kofl515fwb] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-kofl515fwb] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-kofl515fwb] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-kofl515fwb] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

@@ -1,0 +1,51 @@
+﻿@model MedBrat.Areas.Account.ViewModels.VisitsViewModel
+
+<h1>Журнал доктора @Model.DoctorName</h1> 
+
+<style>
+    input[type=checkbox] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    label { 
+        -webkit-appearance: push-button;
+        -moz-appearance: button;
+        cursor: pointer;
+    }
+
+    /* Default State */
+    div.visit {
+        display: none;
+    }
+
+    /* Toggled State */
+    input[type=checkbox]:checked ~ div.visit {
+        display: block;
+    }
+</style>
+@foreach(var visit in Model.Visits)
+{
+    var str = visit.Date.ToString() + visit.Status;
+    <div class="p-1 px-2 mb-2" style="border:1px solid black; max-width:100%">
+        <div class="d-flex justify-content-between">
+            <div class="d-inline-flex flex-row">
+                <div class="me-4">@visit.Date.ToString("dd MMMM yyyy")</div>
+                <div class="me-4">@visit.Status</div>
+            </div>
+            <div class="d-inline-flex flex-row-reverse">
+                <div>
+                    <label for="@str">Подробнее</label>
+                </div>
+            </div>
+            
+        </div>
+        <input type="checkbox" id="@str">
+        <div class="visit">
+            <div><b>Имя доктора: </b>@visit.DoctorName</div>
+            <div><b>Дата посещения: </b>@visit.Date.ToString("dd MMMM yyyy")</div>
+            <div><b>Тип посещения: </b>@visit.Status</div>
+            <div><b>Заключение: </b>@visit.Conclusion</div>
+        </div>
+    </div>
+}

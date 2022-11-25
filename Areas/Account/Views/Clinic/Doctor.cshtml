@@ -1,0 +1,15 @@
+﻿@model MedBrat.Areas.Account.ViewModels.UserProfileViewModel
+
+
+<p>Информация о враче</p>
+
+<p><b>Имя:</b> @Model.Name</p>
+<p><b>Логин:</b> @Model.Polis</p>
+<p><b>Электронная почта:</b> @Model.Email</p>
+<p><b>День Рождения:</b> @Model.DateOfBirth.ToString("d")</p>
+<p><b>Пол:</b> @Model.Sex</p>
+
+<form class="nav-link" asp-area="Account" asp-controller="Clinic" asp-action="DeleteDoctor" method="post"
+asp-route-doctorPolis=@Model.Polis>
+    <input type="submit" value="Удалить врача" />
+</form>

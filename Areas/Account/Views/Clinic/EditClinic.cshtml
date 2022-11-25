@@ -1,0 +1,38 @@
+﻿@model MedBrat.Areas.Account.ViewModels.ClinicEditViewModel
+
+<style>
+.field-validation-error {
+    color: #b94a48;
+}
+  
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+</style>
+<form method="post" asp-anti-forgery="true">
+    <div asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="Name"></label><br />
+            <input type="text" asp-for="Name" value=@Model.Name  />
+            <span asp-validation-for="Name"></span>
+        </p>
+        <p>
+            <label asp-for="Address"></label><br />
+            <input type="text" asp-for="Address" value=@Model.Address />
+            <span asp-validation-for="Address"></span>
+        </p>
+        <p>
+            <label asp-for="City"></label><br />
+            <select asp-for="City" asp-items="ViewBag.Cities"></select>
+            <span asp-validation-for="City"></span>
+        </p>
+        <p>
+            <input type="submit" value="Сохранить"  />
+        </p>
+</form>
+ 
+@await Html.PartialAsync("_ValidationScriptsPartial")

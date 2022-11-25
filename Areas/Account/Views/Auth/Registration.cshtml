@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Регистрация";
+}
+@model MedBrat.Areas.Account.ViewModels.UserRegistrationViewModel
+
+<style>
+.field-validation-error {
+    color: #b94a48;
+}
+  
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+</style>
+<form method="post" asp-anti-forgery="true">
+    <div asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="Name"></label><br />
+            <input type="text" asp-for="Name" placeholder="Иванов Иван Иванович" />
+            <span asp-validation-for="Name"></span>
+        </p>
+        <p>
+            <label asp-for="Polis"></label><br />
+            <input type="text" asp-for="Polis" />
+            <span asp-validation-for="Polis"></span>
+        </p>
+        <p>
+            <label asp-for="Email"></label><br />
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </p>
+        <p>
+            <label asp-for="DateOfBirth"></label><br />
+            <input asp-for="DateOfBirth" />
+            <span asp-validation-for="DateOfBirth"></span>
+        </p>
+        <p>
+            <label asp-for="Sex"></label><br />
+            <input type="radio" asp-for="Sex" value="m" checked="true">Мужской
+            <input type="radio" asp-for="Sex" value="w">Женский
+        </p>
+        <p>
+            <label asp-for="Password"></label><br />
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </p>
+        <p>
+            <label asp-for="PasswordConfirm"></label><br />
+            <input asp-for="PasswordConfirm" />
+            <span asp-validation-for="PasswordConfirm"></span>
+        </p>
+        <p>
+            <input type="submit" value="Регистрация"  />
+        </p>
+</form>
+ 
+@await Html.PartialAsync("_ValidationScriptsPartial")

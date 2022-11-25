@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Tuple<string, DateTime>>
+
+<div class="flex">
+@foreach(var ticket in Model)
+{
+    <div class="mb-3 me-3" style="border:solid 1px black">
+    <div class="m-3">@ticket.Item1</div>
+    <div class="m-3">@ticket.Item2.ToString("dd MMMM yyyy")</div>
+    <div class="mx-3">@ticket.Item2.ToString("HH:mm")</div>
+    <form class="nav-link" asp-area="Appointment" asp-controller="Ticket" asp-action="CancelAppointment" method="post"
+    asp-route-doctorName=@ticket.Item1 
+    asp-route-date=@ticket.Item2>
+        <input type="submit" value="Отменить запись" />
+    </form>
+    </div>
+}
+</div>

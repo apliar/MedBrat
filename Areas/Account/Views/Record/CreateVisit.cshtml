@@ -1,0 +1,52 @@
+﻿@model MedBrat.Areas.Account.ViewModels.VisitCreationViewModel
+
+<style>
+.field-validation-error {
+    color: #b94a48;
+}
+  
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+</style>
+<form method="post" asp-anti-forgery="true">
+    <div asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="PatientName"></label><br />
+            <input type="text" asp-for="PatientName" placeholder="Иванов Иван Иванович" />
+            <span asp-validation-for="PatientName"></span>
+        </p>
+        <p>
+            <label asp-for="PatientPolis"></label><br />
+            <input type="text" asp-for="PatientPolis" />
+            <span asp-validation-for="PatientPolis"></span>
+        </p>
+        <p>
+            <label asp-for="VisitDate"></label><br />
+            <input type="text" asp-for="VisitDate" />
+            <span asp-validation-for="VisitDate"></span>
+        </p>
+        <p>
+            <label asp-for="VisitStatus"></label><br />
+            <select asp-for="VisitStatus">
+                <option selected value="Первое посещение">Первое посещение</option>
+                <option value="Повторное посещение">Повторное посещение</option>
+                <option value="На учёте">На учёте</option>
+            </select>
+            <span asp-validation-for="VisitStatus"></span>
+        </p>
+        <p>
+            <label asp-for="VisitConclusion"></label><br />
+            <textarea rows="10" cols="90" asp-for="VisitConclusion" style="resize: none;"></textarea>
+            <span asp-validation-for="VisitConclusion"></span>
+        </p>
+        <p>
+            <input type="submit" value="Добавить"  />
+        </p>
+</form>
+ 
+@await Html.PartialAsync("_ValidationScriptsPartial")

@@ -1,0 +1,9 @@
+﻿@model Tuple<string, string>
+
+<p>У данного пациента отсутствует журнал</p>
+<p>Хотите создать новый журнал?</p>
+<a asp-area="Account" asp-controller="Record" asp-action="CreateRecord" 
+asp-route-patientName=@Model.Item1 
+asp-route-patientPolis=@Model.Item2>
+    Создать журнал
+</a>

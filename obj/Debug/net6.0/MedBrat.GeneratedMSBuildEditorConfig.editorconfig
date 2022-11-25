@@ -1,0 +1,204 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MedBrat
+build_property.RootNamespace = MedBrat
+build_property.ProjectDir = C:\Users\Apliar\source\repos\MedBrat\MedBrat\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Apliar\source\repos\MedBrat\MedBrat
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xBdXRoXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Auth/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xBdXRoXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Clinic/AddDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xDbGluaWNcQWRkRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Clinic/Doctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xDbGluaWNcRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Clinic/EditClinic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xDbGluaWNcRWRpdENsaW5pYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Clinic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xDbGluaWNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Clinic/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xDbGluaWNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/adminManagment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXGFkbWluTWFuYWdtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/Doctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXERvY3RvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXE5vdGlmaWNhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/Patients.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXFBhdGllbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Profile/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xQcm9maWxlXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Record/CreateRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xSZWNvcmRcQ3JlYXRlUmVjb3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Record/CreateVisit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xSZWNvcmRcQ3JlYXRlVmlzaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Record/Doctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xSZWNvcmRcRG9jdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Record/MissingRecord.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xSZWNvcmRcTWlzc2luZ1JlY29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Record/Patient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xSZWNvcmRcUGF0aWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Record/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xSZWNvcmRcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Scheduler/Doctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2NoZWR1bGVyXERvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Scheduler/EditSchedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2NoZWR1bGVyXEVkaXRTY2hlZHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Scheduler/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2NoZWR1bGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Scheduler/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2NoZWR1bGVyXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Search/Cities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2VhcmNoXENpdGllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Search/Clinics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2VhcmNoXENsaW5pY3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Search/Doctors.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2VhcmNoXERvY3RvcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Search/Schedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2VhcmNoXFNjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Search/Ticket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcU2VhcmNoXFRpY2tldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Ticket/TicketsOfDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcVGlja2V0XFRpY2tldHNPZkRvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Ticket/TicketsOfPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcVGlja2V0XFRpY2tldHNPZlBhdGllbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/Ticket/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcVGlja2V0XF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Appointment/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQXBwb2ludG1lbnRcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Home/Partners.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXJ0bmVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Shared/_ProfileMenuPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9maWxlTWVudVBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Areas/Account/Views/Shared/_ProfileLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudFxWaWV3c1xTaGFyZWRcX1Byb2ZpbGVMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wmtbcdjapl
+
+[C:/Users/Apliar/source/repos/MedBrat/MedBrat/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kofl515fwb

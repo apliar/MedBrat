@@ -1,0 +1,22 @@
+﻿@model MedBrat.Areas.Appointment.ViewModels.TicketViewModel
+
+<h2>@Model.DoctorName</h2>
+
+<p>@Model.Date.ToString("dd MMMM yyyy")</p>
+<p>@Model.Date.ToString("HH:mm")</p>
+
+@if (Model.IsOccupied)
+{
+    <p>Время занято</p>
+}
+else
+{
+    <p>Время свободно</p>
+    <div class="d-flex">
+    <form class = "nav-link" asp-area="Appointment" asp-controller="Ticket" asp-action="MakeAppointment" method="post" 
+    asp-route-doctorName=@Model.DoctorName 
+    asp-route-date=@Model.Date>
+        <input type="submit" value="Записаться" />
+    </form>
+    </div>
+}

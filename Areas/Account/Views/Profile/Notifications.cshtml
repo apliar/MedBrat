@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MedBrat.Models.Notification>
+@{
+    ViewData["Title"] = "Уведомления";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach(var not in Model)
+{
+    <div class="p-1 px-2 mb-2" style="border:1px solid black; max-width:100%">
+        <div class="d-flex justify-content-between">
+            <div class="d-inline-flex flex-row">
+                <div class="me-4">@not.Sender</div>
+                <div class="me-4">@not.Type</div>
+                <div class="me-4">@not.SendingTime.ToString("dd.MM.yyyy HH:mm")</div>
+            </div>
+            <div class="d-inline-flex flex-row-reverse">
+                <div>
+                    <form asp-area="Account" asp-controller="Profile" asp-action="DeleteNotification" method="post"
+                    asp-route-id=@not.Id>
+                        <input type="submit" value="X" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>@not.Message</div>
+        </div>
+    </div>
+}

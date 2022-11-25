@@ -1,0 +1,15 @@
+﻿@model IEnumerable<MedBrat.Areas.Appointment.ViewModels.SearchCardViewModel>
+
+<h1>Выберите клинику:</h1>
+
+<div class="d-flex">
+@foreach (var cl in Model)
+{
+    <div class = "me-4" style = "text-align:center; border:1px solid black">
+        <a class = "nav-link" asp-area="Appointment" asp-controller="Search" asp-action="Doctors" asp-route-clinicName=@cl.Name>
+            <div><b>@cl.Name</b></div>
+            <div style = "color:grey">@cl.Description</div>
+        </a>
+    </div>
+}
+</div>

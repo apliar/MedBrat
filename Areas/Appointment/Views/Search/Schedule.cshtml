@@ -1,0 +1,36 @@
+﻿@model MedBrat.Areas.Appointment.ViewModels.ScheduleViewModel
+
+<h2>@Model.DoctorName</h2>
+
+@foreach(var day in Model.Schedule)
+{
+    <div class="mb-3 w-100" style="border:1px solid black">
+        <div class="mx-2 mt-2"><b>@day.Key.ToString(string.Format("ddd dd MMMM yyyy")).ToUpper()</b></div>
+        <div class="mw-100">
+        @foreach(var time in day.Value)
+        {
+        
+            @if (time.Value)
+            {
+                <div class = "d-inline-flex ms-4 mb-4 mt-3" style="background-color:#b94a48;text-align:center; border:1px solid black">
+                    <div class = "d-inline-flex nav-link" style="color:white">@time.Key.ToString(@"hh\:mm")</div>
+                </div>
+            }
+            else
+            {
+                <div class = "d-inline-flex ms-4 mb-4 mt-3" style = "text-align:center; border:1px solid black;">
+                        @{
+                            var ticketDate = DateTime.Parse(day.Key.ToString("dd-MM-yyyy") + " " + time.Key.ToString());
+                            var ts = $"{ticketDate:O}";
+                        }
+                    <a class = "nav-link" asp-area="Appointment" asp-controller="Search" asp-action="Ticket" 
+                    asp-route-doctorName=@Model.DoctorName asp-route-date=@ts>
+                        @time.Key.ToString(@"hh\:mm")
+                    </a>
+                </div>
+            }
+        
+        }
+        </div>
+    </div>
+}

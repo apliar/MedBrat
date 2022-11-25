@@ -1,0 +1,27 @@
+﻿@model MedBrat.Areas.Account.ViewModels.PatientsRecordFilterViewModel
+@{
+    ViewData["Title"] = "Пациенты";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form class="m-3" method="get">
+    <label>Имя: </label>
+    <input type="search" class="me-3" name="name" value="@Model.SelectedName" />
+  
+    <input class="me-3" type="submit" value="Найти" />
+</form>
+@foreach(var patRec in Model.Patients)
+{
+    <div class="mb-2" style = "text-align:center; border:1px solid black">
+        <a class="nav-link m-1" asp-area="Account" asp-controller="Record" asp-action="Patient" asp-route-id=@patRec.PatientId>
+            <b>@patRec.Name</b>
+        </a>
+    </div>
+}
+
+<div style = "text-align:center">
+    <a class="nav-link m-1" asp-area="Account" asp-controller="Record" asp-action="CreateRecord">
+        + Создать журнал
+    </a>
+</div>

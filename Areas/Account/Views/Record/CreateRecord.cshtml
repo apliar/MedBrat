@@ -1,0 +1,33 @@
+﻿@model MedBrat.Areas.Account.ViewModels.RecordCreationViewModel
+
+<style>
+.field-validation-error {
+    color: #b94a48;
+}
+  
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+</style>
+<form method="post" asp-anti-forgery="true">
+    <div asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="PatientName"></label><br />
+            <input type="text" asp-for="PatientName" placeholder="Иванов Иван Иванович" />
+            <span asp-validation-for="PatientName"></span>
+        </p>
+        <p>
+            <label asp-for="PatientPolis"></label><br />
+            <input type="text" asp-for="PatientPolis" />
+            <span asp-validation-for="PatientPolis"></span>
+        </p>
+        <p>
+            <input type="submit" value="Создать"  />
+        </p>
+</form>
+ 
+@await Html.PartialAsync("_ValidationScriptsPartial")

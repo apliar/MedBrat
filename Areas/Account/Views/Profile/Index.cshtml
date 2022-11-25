@@ -1,0 +1,18 @@
+﻿@model MedBrat.Areas.Account.ViewModels.UserProfileViewModel
+@{
+    ViewData["Title"] = "Личный кабинет";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Информация о пользователе</p>
+
+<p><b>Имя:</b> @Model.Name</p>
+<p><b>Номер полиса:</b> @Model.Polis</p>
+<p><b>Электронная почта:</b> @Model.Email</p>
+<p><b>День Рождения:</b> @Model.DateOfBirth.ToString("d")</p>
+<p><b>Пол:</b> @Model.Sex</p>
+
+<a asp-area="Account" asp-controller="Profile" asp-action="EditProfile">Редактировать</a>
+<br>
+<a asp-area="Account" asp-controller="Auth" asp-action="Logout">Выход</a>

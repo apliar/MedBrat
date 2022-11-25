@@ -1,0 +1,33 @@
+﻿@model Tuple<Dictionary<int, List<TimeSpan>>, int>
+
+@foreach(var day in Model.Item1)
+{
+    switch (day.Key)
+    {
+        case 1:
+            <div>Пн:</div>
+            break;
+        case 2:
+            <div>Вт:</div>
+            break;
+        case 3:
+            <div>Ср:</div>
+            break;
+        case 4:
+            <div>Чт:</div>
+            break;
+        case 5:
+            <div>Пт:</div>
+            break;
+    }
+    <div class="d-flex my-1">
+        @foreach(var time in day.Value)
+        {
+            <div class="me-2">@time.ToString(@"hh\:mm")</div>
+        }
+    </div>
+}
+
+<a class="nav-link m-1" asp-area="Appointment" asp-controller="Scheduler" asp-action="EditSchedule" asp-route-id=@Model.Item2>
+        + Изменить расписание
+</a>

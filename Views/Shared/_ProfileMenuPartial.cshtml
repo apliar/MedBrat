@@ -1,0 +1,31 @@
+﻿@using System.Security.Claims
+
+<nav class="nav flex-column me-5" style="max-width:200px">
+  <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Index">Данные</a>
+  @switch (User.FindFirst(x => x.Type == ClaimsIdentity.DefaultRoleClaimType).Value)
+    {
+        case "patient":
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Doctors">Врачи</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Appointment" asp-controller="Ticket" asp-action="TicketsOfPatient">Талоны</a>
+            break;
+        case "doctor":
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Patients">Пациенты</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Appointment" asp-controller="Ticket" asp-action="TicketsOfDoctor">Талоны</a>
+            break;
+        case "curator":
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Appointment" asp-controller="Scheduler" asp-action="Index">Управление расписанием</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Clinic" asp-action="Index">Клиника</a>
+            break;
+        case "moderator":
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Index">Журнал</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Index">Запросы</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Index">Управление</a>
+            break;
+        case "admin":
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Index">Журнал</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="Index">Запросы</a>
+            <a class="nav-link" style="border-bottom: 1px solid black" asp-area="Account" asp-controller="Profile" asp-action="adminManagment">Управление</a>
+            break;
+    }
+  <a class="nav-link" asp-area="Account" asp-controller="Profile" asp-action="Notifications">Уведомления ( @await Component.InvokeAsync("Notification", User.Identity.Name) )</a>
+</nav>

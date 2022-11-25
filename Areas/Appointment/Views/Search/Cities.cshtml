@@ -1,0 +1,12 @@
+﻿@model IEnumerable<string>
+
+<h1>Выберите город:</h1>
+
+<div class="d-flex">
+@foreach(var cityName in Model)
+{
+    <div class = "me-4" style = "text-align:center; border:1px solid black">
+        <a class = "nav-link" asp-area="Appointment" asp-controller="Search" asp-action="Clinics" asp-route-cityName=@cityName>@cityName</a>
+    </div>
+}
+</div>

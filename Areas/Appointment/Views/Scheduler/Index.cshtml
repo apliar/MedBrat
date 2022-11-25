@@ -1,0 +1,27 @@
+﻿@model MedBrat.Areas.Account.ViewModels.DoctorsRecordFilterViewModel
+@{
+    ViewData["Title"] = "Расписание";
+}
+
+<h1>Расписание клиники: "@Model.ClinicName"</h1>
+
+<form class="m-3" method="get">
+    <label>Имя: </label>
+    <input type="search" class="me-3" name="name" value="@Model.SelectedName" />
+    <input class="me-3" type="submit" value="Найти" />
+</form>
+@foreach(var docRec in Model.Doctors)
+{
+    <div class="mb-2" style = "border:1px solid black; max-width: 800px">
+        <a class="nav-link m-1" asp-area="Appointment" asp-controller="Scheduler" asp-action="Doctor" asp-route-id=@docRec.DoctorId>
+            <div><b>@docRec.Name</b></div>
+            <div style = "color:grey">@docRec.Specialization</div>
+        </a>
+    </div>
+}
+
+<div style = "text-align:center">
+    <a class="nav-link m-1" asp-area="Appointment" asp-controller="Scheduler" asp-action="AddDoctor">
+        + Добавить врача
+    </a>
+</div>

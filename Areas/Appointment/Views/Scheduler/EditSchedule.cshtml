@@ -1,0 +1,110 @@
+﻿@model MedBrat.Areas.Appointment.ViewModels.ScheduleEditViewModel
+
+<style>
+.field-validation-error {
+    color: #b94a48;
+}
+  
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+input[type=checkbox] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+}
+
+input[type=number] {
+    width:50px;
+}
+
+label { 
+    -webkit-appearance: push-button;
+    -moz-appearance: button;
+    cursor: pointer;
+    border: solid 1px black;
+}
+
+/* Default State */
+div.schedule {
+    visibility: hidden;
+}
+
+/* Toggled State */
+input[type=checkbox]:checked ~ div.schedule {
+    visibility: visible;
+}
+</style>
+
+<h1 class="mb-3">Выберите рабочие дни:</h1>
+<form method="post" asp-anti-forgery="true">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div style="display:none">
+        <input type="number" asp-for="Id" value=@Model.Id>
+    </div>
+    <div class="d-flex mb-2">
+        @{
+            int i = 0;
+        }
+        @foreach(var day in Model.Days)
+        {
+            <div class="me-2">
+                <div style="display:none">
+                    <input type="number" asp-for=Days[i].Day value=@day.Day>
+                </div>
+                @switch (day.Day)
+                {
+                    case 1:
+                        <label class="py-1 px-2" for="@day.Day">Пн</label>
+                        break;
+                    case 2:
+                        <label class="py-1 px-2" for="@day.Day">Вт</label>
+                        break;
+                    case 3:
+                        <label class="py-1 px-2" for="@day.Day">Ср</label>
+                        break;
+                    case 4:
+                        <label class="py-1 px-2" for="@day.Day">Чт</label>
+                        break;
+                    case 5:
+                        <label class="py-1 px-2" for="@day.Day">Пт</label>
+                        break;
+                }
+                <input type="checkbox" asp-for=Days[i].IsWorkingDay id="@day.Day">
+                <div class="schedule">
+                    <span><b>Часы работы:</b></span>
+                    <div>
+                        c <input type="time" asp-for=Days[i].WorkingHoursStart value=@day.WorkingHoursStart  />
+                        <span asp-validation-for=Days[i].WorkingHoursStart></span>
+                        до <input type="time" asp-for=Days[i].WorkingHoursEnd value=@day.WorkingHoursEnd  />
+                        <span asp-validation-for=Days[i].WorkingHoursEnd></span>  
+                    </div>
+                    <span><b>
+                        Укажите количество<br />
+                        талонов или<br />
+                        интервал между<br />
+                        талонами в минутах:
+                    </b></span>
+                    <div>
+                        <input type="number" asp-for=Days[i].TicketsNumber value=@day.TicketsNumber  />
+                        талонов <br />
+                        или <br />
+                        <input type="number" asp-for=Days[i].TicketsInterval value=@day.TicketsInterval  />
+                        мин.
+                    </div>
+                </div>
+            </div>
+            i++;
+        }
+    </div>
+    <p>
+        <input type="submit" value="Сохранить"  />
+    </p>
+</form>
+ 
+@await Html.PartialAsync("_ValidationScriptsPartial")

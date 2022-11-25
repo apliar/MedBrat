@@ -1,0 +1,80 @@
+﻿@model MedBrat.Areas.Account.ViewModels.ProfileEditViewModel
+
+<style>
+.field-validation-error {
+    color: #b94a48;
+}
+  
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+/* Default State */
+div.pass {
+    display: none;
+}
+
+/* Toggled State */
+input[type=checkbox]:checked ~ div.pass {
+    display: block;
+}
+</style>
+<form method="post" asp-anti-forgery="true">
+    <div asp-validation-summary="ModelOnly"></div>
+        <p>
+            <label asp-for="Name"></label><br />
+            <input type="text" asp-for="Name" value=@Model.Name  />
+            <span asp-validation-for="Name"></span>
+        </p>
+        <p>
+            <label asp-for="Polis"></label><br />
+            <input type="text" asp-for="Polis" value=@Model.Polis />
+            <span asp-validation-for="Polis"></span>
+        </p>
+        <p>
+            <label asp-for="Email"></label><br />
+            <input asp-for="Email" value=@Model.Email  />
+            <span asp-validation-for="Email"></span>
+        </p>
+        <p>
+            <label asp-for="DateOfBirth"></label><br />
+            <input asp-for="DateOfBirth" value=@Model.DateOfBirth  />
+            <span asp-validation-for="DateOfBirth"></span>
+        </p>
+        <p>
+            @if(Model.Sex == "m")
+        {
+            <label asp-for="Sex"></label><br />
+            <input type="radio" asp-for="Sex" value="m" checked><span>Мужской</span>
+            <input type="radio" asp-for="Sex" value="w"><span>Женский</span>
+        }
+        else
+        {
+            <label asp-for="Sex"></label><br />
+            <input type="radio" asp-for="Sex" value="m"><span>Мужской</span>
+            <input type="radio" asp-for="Sex" value="w" checked><span>Женский</span>
+        }
+        </p>
+        <input type="checkbox">Изменить пароль
+        <div class="pass">
+        <p>
+            <label asp-for="OldPassword"></label><br />
+            <input asp-for="OldPassword" />
+            <span asp-validation-for="OldPassword"></span>
+        </p>
+        <p>
+            <label asp-for="NewPassword"></label><br />
+            <input asp-for="NewPassword" />
+            <span asp-validation-for="NewPassword"></span>
+        </p>
+        </div>
+        <p>
+            <input type="submit" value="Сохранить"  />
+        </p>
+</form>
+ 
+@await Html.PartialAsync("_ValidationScriptsPartial")
