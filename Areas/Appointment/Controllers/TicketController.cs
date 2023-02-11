@@ -90,11 +90,6 @@ namespace MedBrat.Areas.Appointment.Controllers
                 .Include(d => d.Patients)
                 .FirstAsync(p => p.Polis == User.Identity.Name);
 
-            var patient = await _context.Patients.FirstAsync(p => p.Name == "patient4");
-            var d = new DateTime(2022, 10, 26, 14, 15, 0);
-            if (!doctor.MedTickets.Where(t => t.Patient == patient && t.Time == d).Any())
-                doctor.MedTickets.Add(new MedTicket() { Id = new Guid(), Patient = patient, Time = d });
-
             doctor.MedTickets
                 .Where(t => t.Time - DateTime.Today < TimeSpan.Zero)
                 .ToList()

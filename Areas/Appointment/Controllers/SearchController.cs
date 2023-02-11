@@ -17,14 +17,12 @@ namespace MedBrat.Areas.Appointment.Controllers
             _context = dbcontext;
         }
 
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = 300)]
         public IActionResult Cities()
         {
             var cities = _context.Cities.Select(c => c.Name).ToList();
             return View(cities);
         }
 
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = 300)]
         public IActionResult Clinics(string cityName)
         {
             var clinics = _context.Clinics
@@ -39,7 +37,6 @@ namespace MedBrat.Areas.Appointment.Controllers
             return View(clinicsVM);
         }
 
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = 300)]
         public IActionResult Doctors(string clinicName)
         {
             var doctors = _context.Doctors
@@ -63,7 +60,8 @@ namespace MedBrat.Areas.Appointment.Controllers
             var doctorsSchedule = new Dictionary<DateTime, Dictionary<TimeSpan, bool>>();
 
             var sGenerator = new ScheduleGenerator();
-            var generatedSchedule = sGenerator.Generate(DateTime.Today, 4, doctor.Schedule.WeekSchedule);
+            var generatedSchedule = sGenerator.Generate(DateTime.Today, 4, 
+                doctor.Schedule == null ? new Dictionary<int, List<TimeSpan>>() : doctor.Schedule.WeekSchedule);
 
             foreach(var day in generatedSchedule)
             {

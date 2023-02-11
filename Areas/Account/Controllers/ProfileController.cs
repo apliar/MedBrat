@@ -1,4 +1,5 @@
-﻿using MedBrat.Areas.Account.Models;
+﻿using AutoMapper;
+using MedBrat.Areas.Account.Models;
 using MedBrat.Areas.Account.ViewModels;
 using MedBrat.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -10,27 +11,21 @@ namespace MedBrat.Areas.Account.Controllers
     [Authorize]
     public class ProfileController : Controller
     {
+        private readonly IMapper _mapper;
         ApplicationContext _context;
 
-        public ProfileController(ApplicationContext dbcontext)
+        public ProfileController(ApplicationContext dbcontext,  IMapper mapper)
         {
             _context = dbcontext;
+            _mapper = mapper;
         }
 
-        [ResponseCache(Location = ResponseCacheLocation.Client, Duration = 300)]
         public async Task<IActionResult> Index()
         {
             User user = await _context.Users
                 .FirstAsync(u => u.Polis == User.Identity.Name);
 
-            UserProfileViewModel userProfile = new UserProfileViewModel()
-            {
-                Name = user.Name,
-                Polis = user.Polis,
-                DateOfBirth = user.DateOfBirth,
-                Email = user.Email != null ? user.Email : "Не указана",
-                Sex = user.Sex
-            };
+            var userProfile = _mapper.Map<UserProfileViewModel>(user);
             return View(userProfile);
         }
 

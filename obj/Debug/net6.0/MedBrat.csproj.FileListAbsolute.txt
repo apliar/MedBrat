@@ -257,3 +257,5 @@ C:\Users\Apliar\source\repos\MedBrat\MedBrat\bin\Debug\net6.0\Microsoft.Identity
 C:\Users\Apliar\source\repos\MedBrat\MedBrat\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Apliar\source\repos\MedBrat\MedBrat\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Apliar\source\repos\MedBrat\MedBrat\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Apliar\source\repos\MedBrat\MedBrat\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Apliar\source\repos\MedBrat\MedBrat\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

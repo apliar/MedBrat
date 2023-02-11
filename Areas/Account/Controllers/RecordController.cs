@@ -82,7 +82,12 @@ namespace MedBrat.Areas.Account.Controllers
 
             if (mr != null)
             {
-                return View(new VisitsViewModel() { PatientName = patient.Name, DoctorName = doctor.Name, Visits = mr.Visits });
+                return View(new VisitsViewModel() 
+                { 
+                    PatientName = patient.Name, 
+                    DoctorName = doctor.Name, 
+                    Visits = mr.Visits 
+                });
             }
 
             return RedirectToAction("Doctors", "Proflie");

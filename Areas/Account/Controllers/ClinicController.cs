@@ -1,4 +1,5 @@
-﻿using MedBrat.Areas.Account.Models;
+﻿using AutoMapper;
+using MedBrat.Areas.Account.Models;
 using MedBrat.Areas.Account.ViewModels;
 using MedBrat.Areas.Appointment.Models;
 using MedBrat.Models;
@@ -12,11 +13,13 @@ namespace MedBrat.Areas.Account.Controllers
     [Authorize(Roles = "curator")]
     public class ClinicController : Controller
     {
+        private readonly IMapper _mapper;
         ApplicationContext _context;
 
-        public ClinicController(ApplicationContext dbcontext)
+        public ClinicController(ApplicationContext dbcontext, IMapper mapper)
         {
             _context = dbcontext;
+            _mapper = mapper;
         }
 
         public IActionResult Index()
@@ -26,10 +29,7 @@ namespace MedBrat.Areas.Account.Controllers
                 .Where(d => d.ClinicId == clinic.Id)
                 .ToList();
 
-            var clinicVM = new ClinicViewModel();
-            clinicVM.Name = clinic.Name;
-            clinicVM.City = clinic.City.Name;
-            clinicVM.Address = clinic.Address;
+            var clinicVM = _mapper.Map<ClinicViewModel>(clinic);
             foreach(var doc in doctors)
             {
                 clinicVM.Doctors.Add(new DoctorsRecordViewModel()
@@ -80,14 +80,7 @@ namespace MedBrat.Areas.Account.Controllers
             if (doctor == null)
                 return NotFound();
 
-            UserProfileViewModel userProfile = new UserProfileViewModel()
-            {
-                Name = doctor.Name,
-                Polis = doctor.Polis,
-                DateOfBirth = doctor.DateOfBirth,
-                Email = doctor.Email != null ? doctor.Email : "Не указана",
-                Sex = doctor.Sex
-            };
+            var userProfile = _mapper.Map<UserProfileViewModel>(doctor);
 
             return View(userProfile);
         }
@@ -105,14 +98,7 @@ namespace MedBrat.Areas.Account.Controllers
 
             if (_context.Users.FirstOrDefault(u => u.Polis == newDoctor.Polis) == null)
             {
-                var doctor = new Doctor();
-                doctor.Name = newDoctor.Name;
-                doctor.Polis = newDoctor.Polis;
-                doctor.Email = newDoctor.Email;
-                doctor.DateOfBirth = newDoctor.DateOfBirth;
-                doctor.Sex = newDoctor.Sex;
-                doctor.Password = newDoctor.Password;
-                doctor.Specialization = newDoctor.Specialization;
+                var doctor = _mapper.Map<Doctor>(newDoctor);
                 doctor.Clinic = clinic;
                 doctor.Role = _context.Roles.First(r => r.Name == "doctor");
                 doctor.Schedule = new Schedule();

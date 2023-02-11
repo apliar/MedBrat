@@ -1,4 +1,5 @@
-﻿using MedBrat.Areas.Account.Models;
+﻿using AutoMapper;
+using MedBrat.Areas.Account.Models;
 using MedBrat.Areas.Account.ViewModels;
 using MedBrat.Models;
 using Microsoft.EntityFrameworkCore;
@@ -7,11 +8,13 @@ namespace MedBrat.Areas.Account.Services
 {
     public class AuthService
     {
+        private readonly IMapper _mapper;
         ApplicationContext _context;
 
-        public AuthService(ApplicationContext dbcontext)
+        public AuthService(ApplicationContext dbcontext, IMapper mapper)
         {
             _context = dbcontext;
+            _mapper = mapper;
         }
 
         public async Task<User?> ValidateUser(UserLoginViewModel userLog)
@@ -28,16 +31,8 @@ namespace MedBrat.Areas.Account.Services
             if (alreadyExistsUser == null)
             {
                 Role userRole = await _context.Roles.FirstOrDefaultAsync(r => r.Name == "patient");
-                var user = new Patient()
-                {
-                    Name = userReg.Name,
-                    Email = userReg.Email,
-                    Password = userReg.Password,
-                    Polis = userReg.Polis,
-                    Sex = userReg.Sex,
-                    DateOfBirth = userReg.DateOfBirth,
-                    Role = userRole
-                };
+                var user = _mapper.Map<Patient>(userReg);
+                user.Role = userRole;
 
                 _context.Patients.Add(user);
                 await _context.SaveChangesAsync();

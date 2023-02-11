@@ -14,12 +14,16 @@ namespace MedBrat.Controllers
             _logger = logger;
         }
 
+        [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Client)]
         public IActionResult Index() => View();
 
+        [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Client)]
         public IActionResult Privacy() => View();
 
+        [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Client)]
         public IActionResult About() => View();
 
+        [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Client)]
         public IActionResult Partners()
         {
             return View();
